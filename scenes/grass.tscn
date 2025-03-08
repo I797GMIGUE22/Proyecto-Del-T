@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmqxewfoiwmkn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsfr1"]
+size = Vector2(439.143, 17.4286)
+
+[node name="Grass" type="StaticBody2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+clip_contents = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1089.0
+offset_top = 4.0
+offset_right = -465.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(5, 5)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(459, 87)
+scale = Vector2(7, 7)
+shape = SubResource("RectangleShape2D_nsfr1")
