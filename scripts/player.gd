@@ -7,7 +7,7 @@ const GRAVITY = 6000
 const GRAVITY_DIAGONAL = 3000 * 14
 const MOVE_VELOCITY = 2700
 const JUMP_VELO_DIAGONAL = MOVE_VELOCITY * -2.3
-const MINIMUM_DRAG = 39.9
+const MINIMUM_DRAG = 39.45
 const THRESHOLD = 20.4
 
 var is_superior_diagonal = false
@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 			swipe_cursor_pos = get_global_mouse_position()
 			if swipe_start_pos.distance_to(swipe_cursor_pos) >= MINIMUM_DRAG and $Timer.time_left:
 				$Timer.stop()
-				if abs(swipe_start_pos.y - swipe_cursor_pos.y) <= THRESHOLD and is_on_floor():#Range 40
+				if abs(swipe_start_pos.y - swipe_cursor_pos.y) <= THRESHOLD:#Range 40
 					print(swipe_start_pos.y - swipe_cursor_pos.y)
 					print("X: ", swipe_start_pos.x - swipe_cursor_pos.x)
 					print("horizontal")
