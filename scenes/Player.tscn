@@ -19,3 +19,7 @@ texture = ExtResource("1_r6md6")
 scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_r7cki")
 script = SubResource("GDScript_v6fml")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.088
+one_shot = true
